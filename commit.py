@@ -1,7 +1,6 @@
+#!/usr/bin/python
 import subprocess
 import os
-import sys
-import argparse
 
 filepath = os.path.dirname(os.path.realpath(__file__))
 os.chdir(filepath)
@@ -11,4 +10,3 @@ subprocess.call(["git", "pull", "ssh://git@github.com/DataManiac18/tooltest", de
 subprocess.call(["git", "add", "."])
 subprocess.call(["git", "commit", "-m", comm_message])
 subprocess.call(["git", "push", "origin", desired_branch])
-#test = subprocess.call("echo hey")
