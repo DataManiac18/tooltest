@@ -8,6 +8,10 @@ devnull = open(os.devnull, 'w')
 desired_branch = raw_input("Please enter desired branch: ")
 comm_message = raw_input("Please enter commit message: ")
 subprocess.call(["git", "pull", "ssh://git@github.com/DataManiac18/tooltest", desired_branch], stdout=devnull)
+print "pulled"
 subprocess.call(["git", "add", "."], stdout=devnull)
+print "added"
 subprocess.call(["git", "commit", "-m", comm_message], stdout=devnull)
+print "committed"
 subprocess.call(["git", "push", "origin", desired_branch], stdout=devnull)
+print "pushed"
