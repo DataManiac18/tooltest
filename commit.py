@@ -13,5 +13,5 @@ subprocess.call(["git", "add", "."], stdout=devnull)
 print "added"
 subprocess.call(["git", "commit", "-m", comm_message], stdout=devnull)
 print "committed"
-subprocess.call(["git", "push", "origin", desired_branch], stdout=devnull)
+subprocess.call(["git", "push", "ssh://git@github.com/DataManiac18/tooltest", desired_branch], stdout=devnull)
 print "pushed"
